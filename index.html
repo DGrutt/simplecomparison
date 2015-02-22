@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ven Diagram</title>
+    <style type=”text/css”>
+    #pagearea {
+    width: 100%;
+    margin: 0 auto;
+    }
+    textarea {
+    width: 48%;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    }
+    input {
+    width: 80px;
+    height: 40px;
+    }
+     </style>
+	<script language="javascript" type="text/javascript">
+	function GetValue()
+	{
+	var str = document.getElementById('txtUsername').value;
+	alert(str);
+	}
+	</script>
+	 
+    </head>
+    <body>
+        <div id="pagearea">
+        <h1>
+        This program allows you to match text. The text must be unicode.
+        Enter two text blocks to compare:
+        </h1>
+        <form action="/D:/Programming/venDiagram/templates/results.html" method="get">
+          <textarea name="A" cols="100" rows="20"></textarea>
+          <textarea name="B" cols="100" rows="20"></textarea>
+          <br />
+          <input type="submit"/>
+        </form>
+        </div>
+	
+	<h1 onclick="this.innerHTML='Ooops!'">Click on this text!</h1>
+	
+	<script>
+	(function() {
+	'use strict';
+
+	$('#my_form').on('submit', function(e) {
+    e.preventDefault();
+
+    $.post('/path/to/server_side_component', $('#my_form').serialize(), function(result) {
+       $('#my_dom_node').append(result);
+    });
+	});
+	}());
+	</script>
+	
+    </body>
+</html>
+
