@@ -45,10 +45,10 @@
 	(function() {
 	'use strict';
 
-	$('#my_form').on('submit', function(e) {
+	$('#pagearea').on('submit', function(e) {
     e.preventDefault();
 
-    $.post('/path/to/server_side_component', $('#my_form').serialize(), function(result) {
+    $.post('/path/to/server_side_component', $('#pagearea').serialize(), function(result) {
        $('#my_dom_node').append(result);
     });
 	});
